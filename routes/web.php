@@ -7,3 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post('/api/v1/storage', [StorageController::class, 'storage'])->name('storage.api');
+Route::get('/api/v1/image/{token}', [StorageController::class, 'enmascarar'])->name('image.api.enmascarar');
